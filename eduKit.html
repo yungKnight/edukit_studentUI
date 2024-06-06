@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>education kit</title>
+  <link rel="stylesheet" type="text/css" href="edukit.css">
+  <script type="text/javascript" src="edukit.js" defer></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <header>
+      <img src="../images/e.png" alt="edukit" width="10%" height="100px">
+  </header>
+  <div class="notice">
+    <marquee id="personal" behavior="slide" direction="top" scrollamount="50px" scrolldelay="1500ms" onmouseover="this.stop()" onmouseout="this.start()">
+        Good morning Student.
+   </marquee> 
+  </div>
+  <div id="Container">
+    <div class="Content">
+      <h1>Grade Point Average Kaleidoscope</h1>
+      <div id="plotlyChart"></div>
+    </div>
+
+    <div class="Content1">
+       <h1>Insights</h1>
+      <!-- aims to do an overlaying of the different major category of a person's discipline on the chart e.g Economics==> i) int'l economics, ii) micro economics-->
+      <canvas id="pieChart"></canvas>
+    </div>
+
+    <div class="Content2">
+
+      <!-- needs course title and days of lecture or/and planned reading times and seeks to send an alarm everytime half an hour before time for lecture-->
+
+    <div class="scheduleInfo">
+    <select id="scheduleType">
+      <option value="Lecture">Lecture Schedule</option>
+      <option value="Makeshift">Makeshift Schedule</option>
+      <option value="Assignment">Assignment Schedule</option>
+      <option value="Revision">Revision Schedule</option>
+      <option value="Examination">Examination Schedule</option>
+    </select>
+
+    <form id="scheduleForm" onsubmit="addSchedule(event)">
+      <input type="text" required>
+      <input type="time" required>
+      <input type="date" required>
+      <button type="submit">Add Schedule</button>
+    </form>
+    
+    <div class="mySchedule">
+      <table id="scheduleTable">
+        <caption>My Schedule</caption>
+ <thead>
+      <tr>
+        <th>Type</th>
+        <th>Course</th>
+        <th>Date</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Schedule items will be dynamically added here -->
+    </tbody>
+  </table>
+    </div>
+  </div>
+    </div>
+
+    <div class="Content3">
+      <!--This segment aims to calculate CGPA ceiling and also required average grade to be scored over the remaining units to be offered to meet a student's target-->
+
+    <div id = 'assessment'>      
+      <form id = 'assessmentForm' onsubmit="addCourse(event)">
+        <li class='assess'>
+          <label for='subDiscipline'>Branch:</label>
+          <select id="subDiscipline">
+            <option value="Micro">Microeconomics</option>
+            <option value="Macro">Macroeconomics</option>
+            <option value="Accessories">Others</option>
+          </select>
+        </li>
+
+        <li class='assess'>
+          <label for='courseCode'>Course:</label>
+          <input 
+        type="text" placeholder="Course code" id="courseCode" required>
+        </li>
+
+        <li class='assess'>
+          <label for='Course-Unit'>Unit:</label>
+          <input type="number" placeholder="Units" id="Course-Unit" required min='0'>
+        </li>
+
+        <li class='assess'>
+          <label for='acquiredGP'>Score:</label>
+          <input type="number" id="acquiredGP" required min='0' max='5'>
+        </li>
+
+        <input type="submit">
+      <div id="cgpaDisplay"><span>CGPA: </span></div>
+      </form>
+      <div>
+      <table id="assessmentTable">
+        <caption>Self-Assessment Tool</caption>
+ <thead>
+      <tr>
+        <th>Branch</th>
+        <th>Course</th>
+        <th>Units</th>
+        <th>Acquired-GP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- items will be dynamically added here -->
+    </tbody>
+  </table>   
+    </div>
+  </div>
+</body>
+</html> 
