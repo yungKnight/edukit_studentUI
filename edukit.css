@@ -1,0 +1,143 @@
+#Container {
+  display: grid;
+  grid-template-columns: 50% calc(50% - 35px);
+  grid-gap: 40px;
+}
+
+.Content, .Content1 {
+  height: 465.875px;
+}
+
+.Content {
+  text-align: center;
+  position: relative;
+  background: linear-gradient(to top, rgba(240, 0, 0, 0.75) 17%, rgba(240, 0, 0, 0.61) 37%, rgba(255, 255, 102, 1) 54.7%, rgba(2, 255, 10, 1) 60%, rgba(255, 255, 255, 1) 78%);
+}
+
+.Content1, .Content2, .Content3 {
+  text-align: center;
+}
+
+.scheduleInfo {
+  display: grid;
+  grid-template-columns: 25% calc(75% - 5px);
+  grid-column-gap: 5px;
+  grid-template-rows: auto auto;
+}
+
+#scheduleType {
+  grid-row: 1;
+}
+
+#scheduleForm {
+  grid-row: 2;
+  grid-column: span 2;
+}
+
+.scheduleInfo > select {
+  margin-top: 37px;
+  color: red;
+}
+
+caption {
+  font-size: 2rem;
+}
+
+.scheduleInfo > form {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  width: 70%;
+}
+
+input {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: auto;
+  display: inline-block;
+}
+
+#scheduleTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-image: url('../images/book.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+th {
+  padding: 20px 10px 10px 10px;
+  font-size: 0.85rem;
+}
+
+td {
+  text-transform: capitalize;
+  font-size: 0.95em;
+  border-bottom: 1px solid black;
+  padding: 0px 8px 4px 10px;
+}
+
+th, td {
+  text-align: center;
+  border-bottom: 0px solid rgba(0, 0, 0, 0.3);
+}
+
+#assessment {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-column-gap: 25px;
+}
+
+.assess {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.assess > select {
+  width: 50%;
+}
+
+.assess > input {
+  width: 48%;
+  margin-bottom: 0.1em;
+}
+
+.assess > label {
+  font-size: 0.75em;
+  font-weight: 800;
+}
+
+#assessmentTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-image: url('../images/book.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+li {
+  list-style: none;
+}
+
+marquee {
+  padding-top: 15px;
+  padding-right: 10px;
+  backdrop-filter: blur(4px);
+  color: black;
+  font-size: 20px;
+  z-index: 10000;
+  width: 90%;
+  height: 40px;
+  float: right;
+}
+
+.notice {
+  position: fixed;
+  background: rgba(120, 100, 24, 0.4);
+  top: 0;
+  right: 0;
+  width: 18%;
+  border-radius: 8px 10px 8px 15px;
+}
