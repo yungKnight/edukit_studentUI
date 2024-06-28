@@ -142,3 +142,9 @@ marquee {
   width: 18%;
   border-radius: 8px 10px 8px 15px;     
 }
+
+.Content > * {
+  width: 100% !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+}
